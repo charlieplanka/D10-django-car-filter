@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Производитель</th>
+                <th scope="col">Модель</th>
+                <th scope="col">Год выпуска</th>
+                <th scope="col">Коробка передач</th>
+                <th scope="col">Цвет</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in object_list %}
+            <tr>            
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ car.manufacturer }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+                <td>{{ car.get_transmission_display }}</td>
+                <td>{{ car.color }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
