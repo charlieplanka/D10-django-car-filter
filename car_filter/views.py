@@ -15,6 +15,6 @@ class CarListView(ListView):
         filter_params = Q()
         for key, value in get_params.items():
             if value:
-                filter_params.add(Q(**{key: value}), Q.AND)
+                filter_params.add(Q(**{f'{key}__icontains': value}), Q.AND)
         qs = qs.filter(filter_params)
         return qs
