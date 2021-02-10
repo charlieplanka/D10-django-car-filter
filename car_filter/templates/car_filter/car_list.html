@@ -1,6 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+    <form class="m-4" method="get" action="">
+        <div class="row">
+            <div class="col-auto">
+                <label for="manufacturer">Производитель</label>
+                <input type="text" class="form-control" id="manufacturer" name="manufacturer" placeholder="Audi">
+            </div>
+            <div class="col-auto">
+                <label for="model">Модель</label>
+                <input type="text" class="form-control" id="model" name="model" placeholder="TT">
+            </div>
+            <div class="col-auto">
+                <label for="year">Год выпуска</label>
+                <input type="text" class="form-control" id="year" name="year" placeholder="1998">
+            </div>
+            <div class="col-auto">
+                <label for="transmission">Коробка передач</label>
+                <select class="form-control" id="transmission" name="transmission">
+                    <option selected value="">Неважно</option>
+                    <option value="1">Механика</option>
+                    <option value="2">Автомат</option>
+                    <option value="3">Робот</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label for="color">Цвет</label>
+                <input type="text" class="form-control" id="color" name="color" placeholder="красный">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Найти автомобили</button>
+    </form>
+
+
     <table class="table table-hover">
         <thead class="thead-dark">
             <tr>
