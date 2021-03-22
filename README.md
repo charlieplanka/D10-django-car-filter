@@ -28,8 +28,9 @@ virtualenv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
 ```
-3. Запустите сервер (по умолчанию поднимется на 8000 порту):
+3. Выполните миграции, а затем запустите сервер (по умолчанию поднимется на 8000 порту):
 ```
+python manage.py migrate
 python manage.py runserver
 ```
 
@@ -45,7 +46,8 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-3. Запустите сервер (по умолчанию поднимется на 8000 порту):
+3. Выполните миграции, а затем запустите сервер (по умолчанию поднимется на 8000 порту):
 ```
+python manage.py migrate
 python manage.py runserver
 ```
